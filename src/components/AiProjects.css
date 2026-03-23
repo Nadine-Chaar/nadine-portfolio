@@ -1,0 +1,114 @@
+.ai-section {
+  background-color: var(--secondary-color);
+  padding: 120px 0;
+  color: var(--text-color);
+}
+
+.ai-split {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.ai-title {
+  font-size: 3rem;
+  margin-bottom: 25px;
+}
+
+.ai-description {
+  color: var(--text-color);
+  font-size: 1.15rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.workflow-diagram {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 25px 20px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  margin-top: 10px;
+}
+
+.workflow-node {
+  background: var(--bg-color);
+  padding: 10px 14px;
+  border-radius: 20px;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.workflow-node:hover {
+  background: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(187, 210, 225, 0.4);
+}
+
+.workflow-arrow {
+  color: var(--secondary-color);
+  font-weight: bold;
+  animation: flowRight 2s infinite;
+  filter: brightness(0.8);
+}
+
+@keyframes flowRight {
+  0% { opacity: 0.3; transform: translateX(-3px); }
+  50% { opacity: 1; transform: translateX(3px); }
+  100% { opacity: 0.3; transform: translateX(-3px); }
+}
+
+.ai-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.ai-card {
+  padding: 30px;
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+
+.ai-card:hover {
+  transform: translateY(-5px);
+}
+
+.ai-card-icon {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.ai-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-family: var(--font-heading);
+}
+
+.ai-card p {
+  font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  .ai-split {
+    grid-template-columns: 1fr;
+  }
+  .ai-grid {
+    grid-template-columns: 1fr;
+  }
+  .workflow-diagram {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+}

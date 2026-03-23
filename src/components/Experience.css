@@ -1,0 +1,88 @@
+.timeline-section {
+  background-color: var(--bg-color);
+}
+
+.resume-split {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 60px;
+}
+
+.column-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--text-color);
+}
+
+.mt-top {
+  margin-top: 50px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.timeline-item {
+  padding: 30px;
+  border-left: 4px solid var(--primary-color);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.timeline-item .role {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.timeline-item .company {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--text-light);
+  margin-bottom: 15px;
+}
+
+.timeline-item .desc {
+  font-size: 1.05rem;
+}
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.edu-card {
+  padding: 25px;
+}
+
+.edu-card .degree {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.edu-card .school {
+  color: var(--text-color);
+  margin-bottom: 5px;
+}
+
+.edu-card .meta {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--text-light);
+}
+
+.cert-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mb-2 { margin-bottom: 10px; }
+.mr-2 { margin-right: 10px; }
+
+@media (max-width: 900px) {
+  .resume-split {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,4 @@
+/* Remove all default Vite styles from App.css */
+.App {
+  width: 100%;
+}

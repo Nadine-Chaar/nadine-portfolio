@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+:root {
+  /* Editorial Pastel Colors */
+  --bg-color: #FAFAF9; /* Warm very light gray/off-white */
+  --text-color: #171E27; /* Deep navy/charcoal */
+  --text-light: #4A5568; /* Softer text for paragraphs */
+  
+  --primary-color: #BBD2E1; /* Powder blue */
+  --primary-dark: #98B8CE; /* Slightly darker powder blue for hover */
+  
+  --secondary-color: #D6CAE2; /* Soft lavender */
+  --secondary-dark: #BCAED0; /* Darker lavender */
+  
+  --border-color: rgba(23, 30, 39, 0.1);
+  --border-width: 1px;
+
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Outfit', sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Elegant Effects */
+  --box-shadow: 0 15px 40px rgba(23, 30, 39, 0.04);
+  --box-shadow-hover: 0 20px 50px rgba(23, 30, 39, 0.08);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --radius: 12px;
+  
+  /* Layout */
+  --container-max: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: var(--bg-color);
+  background-image: 
+    radial-gradient(circle at top right, rgba(187, 210, 225, 0.4) 0%, transparent 50%),
+    radial-gradient(circle at bottom left, rgba(214, 202, 226, 0.4) 0%, transparent 50%),
+    radial-gradient(circle at 20% 40%, rgba(187, 210, 225, 0.15) 0%, transparent 40%);
+  background-attachment: fixed;
+  color: var(--text-color);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--text-color);
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: var(--text-light);
+  font-weight: 300;
+  font-size: 1.1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Base Component Styles for Editorial Design */
+.editorial-box {
+  background-color: white;
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.editorial-box-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.editorial-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  text-align: center;
+}
+
+.editorial-btn.primary {
+  background-color: var(--text-color);
+  color: white;
+}
+
+.editorial-btn.primary:hover {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(187, 210, 225, 0.4);
+}
+
+.editorial-btn.secondary {
+  background-color: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.editorial-btn.secondary:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 30px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  letter-spacing: 0.03em;
+}
+
+.badge.purple {
+  background-color: var(--secondary-color);
+}
+
+.container {
+  width: 90%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+section {
+  padding: 120px 0;
+  position: relative;
+  background-color: transparent !important;
+}
+
+.section-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section-subtitle {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+  font-size: 1.15rem;
+}
