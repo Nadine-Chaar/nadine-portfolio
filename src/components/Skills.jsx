@@ -4,66 +4,76 @@ import './Skills.css';
 export default function Skills() {
   const categories = [
     {
-      title: "AI & Automation",
+      title: "Growth & Performance",
       accent: "blue-accent",
       items: [
-        "ChatGPT & Prompting",
-        "Workflow Thinking",
-        "Automation Logic",
-        "AI-Assisted Content",
-        "Productivity Systems"
+        "CRO (Conversion Rate)",
+        "A/B Testing",
+        "Funnel Optimization",
+        "Audience Segmentation",
+        "Performance Tracking"
       ]
     },
     {
-      title: "Digital Marketing",
+      title: "Analytics & Data",
       accent: "purple-accent",
       items: [
-        "Campaign Strategy",
-        "Social Media",
-        "Content Creation",
-        "Copywriting",
-        "SEO & Analytics",
-        "Performance Mindset"
+        "GA4 & Tableau",
+        "RStudio",
+        "Custom Dashboards",
+        "Attribution Modeling",
+        "Automated Reporting"
       ]
     },
     {
-      title: "UX / Digital Experience",
+      title: "Campaigns & Content",
       accent: "neutral-accent",
       items: [
-        "UX Thinking",
-        "User Journeys",
-        "Website Content Strategy",
-        "Wireframing Fundamentals",
-        "Conversion-Focused Content"
+        "Campaign Strategy",
+        "Social Media Management",
+        "Lifecycle Campaigns",
+        "Impact Storytelling",
+        "SEO Fundamentals"
+      ]
+    },
+    {
+      title: "AI & Workflow Thinking",
+      accent: "dark-accent",
+      items: [
+        "Workflow Automation",
+        "Structured Pipelines",
+        "AI-Assisted Execution",
+        "Prompt Engineering",
+        "Process Optimization"
       ]
     },
     {
       title: "Tools & Platforms",
-      accent: "dark-accent",
+      accent: "blue-accent",
       items: [
-        "GA4 & Tableau",
-        "RStudio",
         "Meta Business Suite",
         "Canva & CapCut",
         "Figma Fundamentals",
-        "Notion & Asana"
+        "Notion & Asana",
+        "HubSpot CRM"
       ]
     }
   ];
 
   return (
-    <section id="skills" className="expertise-section">
+    <section id="skills" className="skills-section">
       <div className="container">
-        <h2 className="section-title">My Expertise</h2>
-        <p className="section-subtitle">A multi-disciplinary toolkit bridging creative storytelling and technical strategy.</p>
-        
-        <div className="expertise-grid">
-          {categories.map((cat, idx) => (
-            <div key={idx} className={`expertise-card editorial-box editorial-box-hover ${cat.accent}`}>
-              <h3>{cat.title}</h3>
-              <ul className="expertise-list">
-                {cat.items.map((item, i) => (
-                  <li key={i}>{item}</li>
+        <h2 className="section-title">Core Competencies</h2>
+        <div className="skills-grid-editorial">
+          {skillCategories.map((cat, idx) => (
+            <div key={idx} className="skill-card-editorial editorial-box fade-up" style={{ animationDelay: `${idx * 100}ms` }}>
+              <div className="skill-header">
+                <span className="skill-icon">{cat.icon}</span>
+                <h3>{cat.title}</h3>
+              </div>
+              <ul className="skill-list">
+                {cat.skills.map((skill, i) => (
+                  <li key={i}>{skill}</li>
                 ))}
               </ul>
             </div>

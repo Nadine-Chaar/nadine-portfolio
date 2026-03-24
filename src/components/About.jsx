@@ -6,29 +6,24 @@ export default function About() {
   return (
     <section id="about" className="about-section">
       <div className="container">
-        <div className="about-grid">
-          <div className="about-image-column">
-             <div className="abstract-visual-block editorial-box" style={{ padding: 0, border: 'none' }}>
-                <img src={project1} alt="About Nadine" className="about-img" />
-             </div>
+        <div className="about-grid editorial-box fade-up">
+          <div className="about-heading-col">
+            <h2 className="about-title">
+              <span className="text-highlight blue">Strategy</span> grounded in real experience.
+            </h2>
+            <div className="about-decorative-line"></div>
           </div>
-          
-          <div className="about-text-column">
-            <h2>Redefining how we connect.</h2>
+          <div className="about-text-col">
             <div className="about-prose">
               <p>
-                As a digital marketing professional with over 4 years of experience, I’ve managed multi-platform campaigns, crafted advocacy communications, and built strategies that genuinely connect with audiences.
+                My journey in digital marketing started at the front lines of advocacy communications. As the <strong>Social Media Coordinator at the Children’s Cancer Center of Lebanon (CCCL)</strong>, I learned how to turn empathetic <span className="text-highlight pink">storytelling</span> into measurable performance, driving tangible engagement and donation growth.
               </p>
               <p>
-                My journey spans from working as the <strong>Social Media Coordinator at the Children’s Cancer Center of Lebanon (CCCL)</strong> to agency roles where I honed my skills in multimedia production, storytelling, and analytics. 
+                From there, I expanded into comprehensive campaign execution—combining content <span className="text-highlight yellow">strategy</span> with rigorous <span className="text-highlight pink">analytics</span> to build user journeys that actually convert. I realized that the best campaigns don't just look good; they solve problems and accelerate growth.
               </p>
               <p>
-                Currently completing my MSc in Digital Marketing & Analytics at Toulouse Business School in Barcelona, I am focused on the intersection of <strong>creativity, user experience, and AI</strong>. I believe the best marketing isn't just about targeting—it's about creating intuitive, memorable digital journeys powered by smart, automated workflows.
+                Currently completing my MSc in Digital Marketing & Analytics at Toulouse Business School in Barcelona, my focus is firmly on the intersection of performance marketing, <span className="text-highlight yellow">UX</span> optimization, and <span className="text-highlight pink">AI</span> automation. I build efficient, data-driven workflows that deliver outsized impact.
               </p>
-            </div>
-            
-            <div className="signature">
-              Nadine Chaar
             </div>
           </div>
         </div>

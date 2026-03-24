@@ -1,88 +1,72 @@
-.timeline-section {
-  background-color: var(--bg-color);
+.timeline-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 40px;
+  border-left: var(--border-width) solid var(--border-color);
 }
 
-.resume-split {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 60px;
+.timeline-card {
+  position: relative;
+  padding: 40px;
+  margin-bottom: 40px;
+  background-color: white;
 }
 
-.column-title {
-  font-family: var(--font-heading);
-  font-size: 2rem;
-  margin-bottom: 30px;
+.timeline-card:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 45px;
+  left: -53px; /* border-width + half width offset */
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-color);
+  border: var(--border-width) solid var(--border-color);
+  box-shadow: 4px 4px 0px var(--border-color);
+  border-radius: 0;
+}
+
+.timeline-card:nth-child(even) .timeline-dot {
+  background-color: var(--secondary-color);
+}
+
+.role {
+  font-size: 1.8rem;
   color: var(--text-color);
-}
-
-.mt-top {
-  margin-top: 50px;
-}
-
-.timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
-.timeline-item {
-  padding: 30px;
-  border-left: 4px solid var(--primary-color);
-  border-radius: 0 var(--radius) var(--radius) 0;
-}
-
-.timeline-item .role {
-  font-size: 1.4rem;
   margin-bottom: 5px;
+  font-weight: 700;
 }
 
-.timeline-item .company {
-  font-family: var(--font-mono);
-  font-size: 0.95rem;
-  color: var(--text-light);
+.company {
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--primary-dark);
   margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 1rem;
 }
 
-.timeline-item .desc {
-  font-size: 1.05rem;
+.timeline-card:nth-child(even) .company {
+  color: var(--secondary-dark);
 }
 
-.education-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.desc {
+  font-size: 1.15rem;
+  line-height: 1.7;
 }
 
-.edu-card {
-  padding: 25px;
-}
-
-.edu-card .degree {
-  font-size: 1.2rem;
-  margin-bottom: 5px;
-}
-
-.edu-card .school {
-  color: var(--text-color);
-  margin-bottom: 5px;
-}
-
-.edu-card .meta {
-  font-size: 0.95rem;
-  font-style: italic;
-  color: var(--text-light);
-}
-
-.cert-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.mb-2 { margin-bottom: 10px; }
-.mr-2 { margin-right: 10px; }
-
-@media (max-width: 900px) {
-  .resume-split {
-    grid-template-columns: 1fr;
+@media (max-width: 600px) {
+  .timeline-container {
+    padding-left: 20px;
+  }
+  .timeline-dot {
+    left: -33px;
+  }
+  .role {
+    font-size: 1.4rem;
   }
 }

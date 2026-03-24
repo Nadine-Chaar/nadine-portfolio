@@ -1,0 +1,105 @@
+.presentations-section {
+  position: relative;
+  z-index: 2;
+}
+
+.presentations-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.presentation-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: white;
+  border: var(--border-width) solid var(--border-color);
+  box-shadow: var(--box-shadow);
+  border-radius: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.presentation-card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 10px 10px 0px var(--border-color);
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-bottom: var(--border-width) solid var(--border-color);
+  background-color: #000;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.presentation-content {
+  padding: 40px;
+}
+
+.presentation-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.presentation-tags span:nth-child(1) { background-color: var(--primary-color); color: var(--text-color); }
+.presentation-tags span:nth-child(2) { background-color: var(--secondary-color); color: white; }
+
+.presentation-title {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+
+.presentation-role {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--secondary-color);
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.presentation-desc {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+@media (min-width: 900px) {
+  .presentation-card {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .video-wrapper {
+    flex: 0 0 50%;
+    padding-bottom: 28%; /* Roughly 16:9 for half width */
+    height: auto;
+    border-bottom: none;
+    border-right: var(--border-width) solid var(--border-color);
+    align-self: stretch; /* Make it fill vertical space */
+  }
+  
+  .video-wrapper iframe {
+    height: 100%; /* Fill the wrapper entirely */
+  }
+
+  .presentation-content {
+    flex: 1;
+    padding: 50px;
+  }
+}

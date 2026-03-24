@@ -29,9 +29,9 @@
   justify-content: space-between;
   background: white;
   padding: 25px 20px;
-  border-radius: var(--radius);
-  border: 1px solid var(--border-color);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  border: var(--border-width) solid var(--border-color);
+  box-shadow: var(--box-shadow);
+  border-radius: 0;
   margin-top: 10px;
 }
 
@@ -77,10 +77,14 @@
   padding: 30px;
   background-color: white;
   transition: transform 0.3s ease;
+  border: var(--border-width) solid var(--border-color);
+  box-shadow: var(--box-shadow);
+  border-radius: 0;
 }
 
 .ai-card:hover {
-  transform: translateY(-5px);
+  transform: translate(-4px, -4px);
+  box-shadow: 10px 10px 0px var(--border-color);
 }
 
 .ai-card-icon {

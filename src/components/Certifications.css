@@ -1,0 +1,42 @@
+.certifications-section {
+  background-color: var(--bg-color);
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cert-badge {
+  padding: 20px 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+.cert-badge:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 6px 6px 0px var(--accent-blue);
+}
+
+.cert-icon {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 0px var(--border-color);
+}
+
+.cert-badge:nth-child(even) .cert-icon {
+  color: var(--secondary-color);
+}
+
+.cert-name {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--text-color);
+  line-height: 1.4;
+}
