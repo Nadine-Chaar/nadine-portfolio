@@ -2,18 +2,18 @@
 
 :root {
   /* Bold Editorial Colors */
-  --bg-color: #FAFAF9; 
-  --text-color: #111111; 
-  --text-light: #444444; 
-  
-  --primary-color: #FFC107; /* Bright Yellow */
-  --primary-dark: #FFB300; 
-  
-  --secondary-color: #E91E63; /* Bright Pink */
-  --secondary-dark: #C2185B; 
-  
+  --bg-color: #FAFAF9;
+  --text-color: #111111;
+  --text-light: #444444;
+
+  --primary-color: #FFC107;
+  --primary-dark: #FFB300;
+
+  --secondary-color: #E91E63;
+  --secondary-dark: #C2185B;
+
   --accent-blue: #0D47A1;
-  
+
   --border-color: #111111;
   --border-width: 2px;
 
@@ -22,14 +22,14 @@
   --font-body: 'Outfit', sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
-  /* Elegant Effects -> Bold Structural Effects */
-  --box-shadow: 6px 6px 0px var(--border-color);
-  --box-shadow-hover: 10px 10px 0px var(--primary-color);
-  --transition: all 0.2s ease-out;
-  --radius: 0px; /* Sharp corners */
-  
   /* Layout */
-  --container-max: 1200px;
+  --container-max: 1440px;
+  --transition: all 0.2s ease-out;
+  --radius: 0px;
+
+  /* Lightened box treatment for open feel */
+  --box-shadow: 4px 4px 0px rgba(17, 17, 17, 0.12);
+  --box-shadow-hover: 8px 8px 0px var(--primary-color);
 }
 
 * {
@@ -43,7 +43,10 @@ html {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, ::before, ::after {
+
+  *,
+  ::before,
+  ::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -53,8 +56,17 @@ html {
 
 body {
   background-color: var(--bg-color);
-  /* Stripping gradients for flat editorial background */
-  background-image: none;
+  background-image:
+    linear-gradient(to right,
+      rgba(255, 193, 7, 0.06) 0%,
+      rgba(255, 193, 7, 0.02) 10%,
+      rgba(255, 193, 7, 0.00) 20%),
+    linear-gradient(to left,
+      rgba(233, 30, 99, 0.05) 0%,
+      rgba(233, 30, 99, 0.02) 10%,
+      rgba(233, 30, 99, 0.00) 20%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   color: var(--text-color);
   font-family: var(--font-body);
   line-height: 1.6;
@@ -62,7 +74,12 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 500;
   line-height: 1.2;
@@ -84,9 +101,9 @@ a {
 /* Base Component Styles for Editorial Design */
 .editorial-box {
   background-color: white;
-  border: var(--border-width) solid var(--border-color);
+  border: 1px solid rgba(17, 17, 17, 0.12);
   border-radius: var(--radius);
-  box-shadow: var(--box-shadow);
+  box-shadow: none;
   transition: var(--transition);
 }
 
@@ -156,33 +173,31 @@ a {
 }
 
 .container {
-  width: 90%;
+  width: 92%;
   max-width: var(--container-max);
   margin: 0 auto;
 }
 
 section {
-  padding: 160px 0;
+  padding: 0;
   position: relative;
   background-color: transparent !important;
-  border-top: 1px solid var(--border-color);
-}
-
-section:first-of-type {
   border-top: none;
 }
 
 .section-title {
-  font-size: 3rem;
-  margin-bottom: 20px;
+  font-size: 2.8rem;
+  margin-bottom: 26px;
   text-align: center;
+  font-weight: 600;
 }
 
 .section-subtitle {
   text-align: center;
   max-width: 600px;
-  margin: 0 auto 60px auto;
-  font-size: 1.15rem;
+  margin: -4px auto 36px auto;
+  font-size: 1.1rem;
+  color: var(--text-light);
 }
 
 /* Animations & Editorial Utilities */
@@ -221,21 +236,121 @@ section:first-of-type {
 }
 
 .text-highlight.yellow::after {
-  background-color: var(--primary-color);
-  border: 1px solid var(--border-color);
-  box-shadow: 2px 2px 0px var(--border-color);
+  background-color: rgba(255, 193, 7, 0.45);
+  border: none;
+  box-shadow: none;
 }
 
 .text-highlight.pink::after {
-  background-color: var(--secondary-color);
-  border: 1px solid var(--border-color);
-  box-shadow: 2px 2px 0px var(--border-color);
+  background-color: rgba(233, 30, 99, 0.15);
+  border: none;
+  box-shadow: none;
+}
+
+.text-highlight.pink {
+  color: var(--secondary-dark);
 }
 
 .text-highlight.blue::after {
-  background-color: var(--accent-blue);
-  color: white; /* Text inside needs to override to white */
+  background-color: rgba(13, 71, 161, 0.12);
 }
+
 .text-highlight.blue {
-  color: white;
+  color: var(--accent-blue);
+}
+
+/* ===== GLOBAL SECTION SPACING (HERO SAFE) ===== */
+
+/* Do NOT touch hero */
+.hero-section {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+/* Main content sections */
+.about-section,
+.skills-section,
+.projects-section,
+.education-section,
+.timeline-section,
+.experience-section,
+.certifications-section,
+.contact-section,
+.presentations-section,
+.yoga-section {
+  padding-top: 84px;
+  padding-bottom: 84px;
+}
+
+/* Tighter first section after hero */
+.about-section {
+  padding-top: 56px;
+}
+
+/* Consistent title spacing */
+.about-title,
+.section-title {
+  margin-top: 0;
+  margin-bottom: 26px;
+}
+
+/* Subtitle spacing under section titles */
+.section-subtitle {
+  margin-top: -4px;
+  margin-bottom: 36px;
+}
+
+/* Remove random extra space at bottoms of content blocks */
+.about-prose>*:last-child,
+.edu-card>*:last-child,
+.presentation-project-card>*:last-child,
+.timeline-card>*:last-child,
+.experience-card>*:last-child,
+.contact-section>*:last-child,
+.presentation-content>*:last-child,
+.skill-card-editorial>*:last-child,
+.yoga-content>*:last-child {
+  margin-bottom: 0;
+}
+
+/* Keep grids/cards visually cohesive */
+.about-grid,
+.education-grid,
+.projects-grid-presentation,
+.timeline-container,
+.presentations-grid,
+.skills-grid-editorial,
+.yoga-wrapper {
+  margin-bottom: 0;
+}
+
+/* Responsive spacing */
+@media (max-width: 900px) {
+
+  .about-section,
+  .skills-section,
+  .projects-section,
+  .education-section,
+  .timeline-section,
+  .experience-section,
+  .certifications-section,
+  .contact-section,
+  .presentations-section,
+  .yoga-section {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .about-section {
+    padding-top: 44px;
+  }
+
+  .about-title,
+  .section-title {
+    margin-bottom: 20px;
+  }
+
+  .section-subtitle {
+    margin-bottom: 24px;
+  }
 }

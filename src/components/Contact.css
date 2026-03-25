@@ -3,13 +3,16 @@
   padding: 80px 0 40px 0;
 }
 
+/* MAIN BOX — WHITE */
 .contact-wrapper {
-  background-color: var(--primary-color);
-  padding: 80px;
+  background-color: white;
+  padding: 70px;
   text-align: center;
   margin-bottom: 60px;
+  border-top: 4px solid var(--primary-color);
 }
 
+/* HEADER */
 .contact-header {
   max-width: 700px;
   margin: 0 auto 40px auto;
@@ -27,6 +30,7 @@
   opacity: 0.85;
 }
 
+/* BUTTONS */
 .contact-links {
   display: flex;
   justify-content: center;
@@ -34,18 +38,60 @@
   flex-wrap: wrap;
 }
 
+/* META INFO */
+.contact-meta {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 48px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+/* LOCATION */
+.contact-location {
+  font-size: 0.98rem;
+  color: var(--text-color);
+  line-height: 1.7;
+}
+
+/* LANGUAGES */
+.contact-languages {
+  font-size: 0.98rem;
+  color: var(--text-color);
+  line-height: 1.7;
+}
+
+.contact-languages .meta-label {
+  font-weight: 600;
+  color: var(--text-color);
+  margin-right: 6px;
+}
+
+.contact-languages .language-list {
+  color: var(--text-light);
+}
+
+/* FOOTER */
 .contact-footer {
   text-align: center;
   font-family: var(--font-body);
   color: var(--text-light);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .contact-wrapper {
     padding: 40px 20px;
   }
+
   .contact-header h2 {
     font-size: 2.2rem;
+  }
+
+  .contact-meta {
+    gap: 20px;
   }
 }

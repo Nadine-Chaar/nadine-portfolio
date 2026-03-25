@@ -8,7 +8,6 @@ import Education from './components/Education'
 import Certifications from './components/Certifications'
 import Projects from './components/Projects'
 import Presentations from './components/Presentations'
-import AiProjects from './components/AiProjects'
 import YogaSection from './components/YogaSection'
 import Contact from './components/Contact'
 import Chatbot from './components/Chatbot'
@@ -26,7 +25,6 @@ function App() {
       <Certifications />
       <Projects />
       <Presentations />
-      <AiProjects />
       <YogaSection />
       <Contact />
       <Chatbot />

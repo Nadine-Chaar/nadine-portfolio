@@ -3,18 +3,35 @@
   background-color: transparent !important;
 }
 
+.yoga-section .container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
 .yoga-wrapper {
   display: flex;
-  flex-direction: column-reverse; /* image on top on mobile */
-  background-color: white; 
+  flex-direction: column-reverse;
+  background-color: white;
   overflow: hidden;
   border-radius: 0;
+
+  /* ✨ editorial card style */
   border: var(--border-width) solid var(--border-color);
-  box-shadow: var(--box-shadow);
+  box-shadow: 6px 6px 0px var(--border-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* ✨ hover interaction like your other sections */
+.yoga-wrapper:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 10px 10px 0px var(--border-color);
 }
 
 .yoga-content {
-  padding: 50px 40px;
+  padding: 42px 36px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -23,60 +40,89 @@
 
 .yoga-title {
   font-family: var(--font-heading);
-  font-size: 3.5rem;
+  font-size: clamp(2.2rem, 3.2vw, 3rem);
   color: var(--text-color);
-  margin-top: 25px;
-  margin-bottom: 25px;
-  line-height: 1.1;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  line-height: 1.05;
   font-weight: 700;
 }
 
 .yoga-prose p {
-  font-size: 1.25rem;
-  line-height: 1.8;
+  font-size: 1.05rem;
+  line-height: 1.75;
   color: var(--text-color);
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+}
+
+.yoga-prose p:last-child {
+  margin-bottom: 0;
 }
 
 .yoga-image-container {
   flex: 1;
-  min-height: 350px;
-  background-color: var(--primary-color);
+  min-height: 380px;
   position: relative;
+
   border-bottom: var(--border-width) solid var(--border-color);
 }
 
 .yoga-img {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+
+  /* 👇 KEY FIX: shift image LEFT inside the frame */
+  object-position: 35% 35%;
 }
 
 .yoga-placeholder {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-color);
   font-family: var(--font-mono);
-  font-size: 1.2rem;
   background-color: var(--primary-color);
 }
 
+/* Desktop */
 @media (min-width: 900px) {
   .yoga-wrapper {
     flex-direction: row;
   }
+
+  .yoga-content {
+    width: 52%;
+    padding: 48px 40px;
+  }
+
   .yoga-image-container {
+    width: 48%;
+    min-height: 520px;
+
     border-bottom: none;
     border-left: var(--border-width) solid var(--border-color);
+  }
+}
+
+/* Mobile */
+@media (max-width: 899px) {
+  .yoga-content {
+    padding: 28px 22px;
+  }
+
+  .yoga-title {
+    font-size: 2.2rem;
+  }
+
+  .yoga-prose p {
+    font-size: 1rem;
+  }
+
+  .yoga-image-container {
+    min-height: 300px;
   }
 }

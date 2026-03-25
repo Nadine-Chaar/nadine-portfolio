@@ -4,102 +4,185 @@
 }
 
 .presentations-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-.presentation-card {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+.presentation-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.video-card,
+.presentation-content-card {
   background-color: white;
   border: var(--border-width) solid var(--border-color);
   box-shadow: var(--box-shadow);
-  border-radius: 0;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.presentation-card:hover {
+.video-card:hover,
+.presentation-content-card:hover {
   transform: translate(-4px, -4px);
   box-shadow: 10px 10px 0px var(--border-color);
 }
 
-.video-wrapper {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  height: 0;
-  overflow: hidden;
-  border-bottom: var(--border-width) solid var(--border-color);
-  background-color: #000;
+.video-card {
+  display: block;
+  width: 100%;
+  padding: 0;
+  text-decoration: none;
+  color: inherit;
+  align-self: start;
 }
 
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
+.video-thumbnail-shell {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: #111;
+}
+
+.video-thumbnail-img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.video-card:hover .video-thumbnail-img {
+  transform: scale(1.03);
+}
+
+.video-thumbnail-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.12),
+      rgba(0, 0, 0, 0.03));
+  pointer-events: none;
+}
+
+.play-button {
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+  width: 72px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.play-button svg {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.28));
 }
 
 .presentation-content {
-  padding: 40px;
+  padding: 36px 38px;
+  max-width: 540px;
 }
 
 .presentation-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
-.presentation-tags span:nth-child(1) { background-color: var(--primary-color); color: var(--text-color); }
-.presentation-tags span:nth-child(2) { background-color: var(--secondary-color); color: white; }
+.presentation-tags span:nth-child(1) {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.presentation-tags span:nth-child(2) {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.presentation-tags span:nth-child(3) {
+  background-color: var(--accent-blue);
+  color: white;
+}
 
 .presentation-title {
   font-size: 1.8rem;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
   color: var(--text-color);
+  font-weight: 600;
+  line-height: 1.15;
 }
 
 .presentation-role {
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--secondary-color);
-  font-weight: 500;
-  margin-bottom: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
 }
 
 .presentation-desc {
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: 1.08rem;
+  line-height: 1.72;
+  color: var(--text-light);
 }
 
 @media (min-width: 900px) {
-  .presentation-card {
-    flex-direction: row;
-    align-items: center;
+  .presentation-row {
+    grid-template-columns: 52% 1fr;
+    gap: 24px;
+    align-items: start;
   }
-  
-  .video-wrapper {
-    flex: 0 0 50%;
-    padding-bottom: 28%; /* Roughly 16:9 for half width */
-    height: auto;
-    border-bottom: none;
-    border-right: var(--border-width) solid var(--border-color);
-    align-self: stretch; /* Make it fill vertical space */
-  }
-  
-  .video-wrapper iframe {
-    height: 100%; /* Fill the wrapper entirely */
+
+  .video-card {
+    align-self: start;
   }
 
   .presentation-content {
-    flex: 1;
-    padding: 50px;
+    padding: 40px 42px;
+  }
+}
+
+@media (max-width: 900px) {
+  .presentations-grid {
+    gap: 32px;
+  }
+
+  .presentation-row {
+    gap: 18px;
+  }
+
+  .presentation-content {
+    padding: 28px 24px;
+    max-width: 100%;
+  }
+
+  .presentation-title {
+    font-size: 1.55rem;
+  }
+
+  .presentation-desc {
+    font-size: 1rem;
+    line-height: 1.68;
+  }
+
+  .play-button {
+    right: 18px;
+    bottom: 18px;
+    width: 64px;
+    height: 44px;
   }
 }

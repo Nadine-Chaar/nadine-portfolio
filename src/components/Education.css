@@ -6,48 +6,89 @@
 .education-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 30px;
+  gap: 32px;
   max-width: 900px;
   margin: 0 auto;
 }
 
+/* CARD */
 .edu-card {
-  padding: 40px;
+  padding: 48px 52px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: white;
-}
-
-.edu-card.highlight-card {
-  border-top: 8px solid var(--primary-color);
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 4px solid #ec3a84;
+  transition: all 0.25s ease;
 }
 
 .edu-card:hover {
-  transform: translate(-4px, -4px);
-  box-shadow: 10px 10px 0px var(--secondary-color);
+  transform: translateY(-3px);
+  border-color: rgba(0, 0, 0, 0.14);
+}
+
+/* TEXT */
+.edu-period {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-light);
+  margin-bottom: 14px;
+  opacity: 0.7;
 }
 
 .degree {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   color: var(--text-color);
-  margin-bottom: 10px;
+  margin-bottom: 14px;
   font-weight: 700;
+  line-height: 1.25;
 }
 
+/* ✅ YELLOW HIGHLIGHT */
+.degree-highlight {
+  background: #f4d27a;
+  padding: 2px 8px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+/* OTHER TEXT */
 .school {
-  font-size: 1.2rem;
-  color: var(--text-light);
+  font-size: 1.05rem;
+  color: var(--text-color);
   font-weight: 500;
+  margin-bottom: 4px;
 }
 
-.mt-3 {
-  margin-top: 15px;
-  align-self: flex-start;
+.edu-location {
+  font-size: 0.95rem;
+  color: var(--text-light);
 }
 
+.edu-minor {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-style: italic;
+  opacity: 0.75;
+}
+
+/* GRID */
 @media (min-width: 768px) {
   .education-grid {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .edu-card {
+    padding: 32px 28px;
+  }
+
+  .degree {
+    font-size: 1.5rem;
   }
 }

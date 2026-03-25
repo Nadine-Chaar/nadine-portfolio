@@ -1,31 +1,53 @@
 import React from 'react';
 import './About.css';
-import project1 from '../assets/images/project-1.jpg';
+import aboutImage from '../assets/images/aboutmephoto.png';
 
 export default function About() {
   return (
     <section id="about" className="about-section">
       <div className="container">
-        <div className="about-grid editorial-box fade-up">
-          <div className="about-heading-col">
-            <h2 className="about-title">
-              <span className="text-highlight blue">Strategy</span> grounded in real experience.
-            </h2>
-            <div className="about-decorative-line"></div>
+        <div className="about-grid fade-up">
+
+          <div className="about-visual-col">
+            <div className="about-image-card">
+              <img src={aboutImage} alt="Nadine" className="about-image" />
+            </div>
           </div>
+
           <div className="about-text-col">
+            <h2 className="about-title">
+              About <span className="text-highlight yellow">me</span>
+            </h2>
+
             <div className="about-prose">
+              <p>I'm Nadine, a digital marketing strategist shaped by real-world impact.</p>
+
               <p>
-                My journey in digital marketing started at the front lines of advocacy communications. As the <strong>Social Media Coordinator at the Children’s Cancer Center of Lebanon (CCCL)</strong>, I learned how to turn empathetic <span className="text-highlight pink">storytelling</span> into measurable performance, driving tangible engagement and donation growth.
+                I didn't start in a typical corporate environment. I started at the <strong>Children's Cancer Center of Lebanon (CCCL)</strong>, where marketing wasn't about selling products, but about telling stories that mattered — responsibly.
               </p>
+
               <p>
-                From there, I expanded into comprehensive campaign execution—combining content <span className="text-highlight yellow">strategy</span> with rigorous <span className="text-highlight pink">analytics</span> to build user journeys that actually convert. I realized that the best campaigns don't just look good; they solve problems and accelerate growth.
+                Working on campaigns tied to real human lives forced me to think differently: not just what performs, but what <em>feels right</em>.
               </p>
+
               <p>
-                Currently completing my MSc in Digital Marketing & Analytics at Toulouse Business School in Barcelona, my focus is firmly on the intersection of performance marketing, <span className="text-highlight yellow">UX</span> optimization, and <span className="text-highlight pink">AI</span> automation. I build efficient, data-driven workflows that deliver outsized impact.
+                For four years, I built and executed digital strategies across social media, websites, and campaigns — balancing emotional storytelling with data-driven decision-making. I've worked on everything from content production and UX improvements to SEO and performance tracking, always with one goal: create work that connects and converts without losing authenticity.
+              </p>
+
+              <p>That experience shaped how I approach marketing today:</p>
+
+              <ul className="about-list">
+                <li>Strategy first, not trends</li>
+                <li>Data as a guide, not a crutch</li>
+                <li>People at the center of every decision</li>
+              </ul>
+
+              <p>
+                Now, as I complete my <strong>MSc in Digital Marketing & Analytics</strong> at TBS Education Barcelona, I'm expanding that foundation into performance marketing, analytics, and AI-driven workflows — building systems that make marketing smarter, not just louder.
               </p>
             </div>
           </div>
+
         </div>
       </div>
     </section>
