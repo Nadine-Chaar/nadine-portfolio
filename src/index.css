@@ -347,7 +347,55 @@ section {
 
   .about-title,
   .section-title {
+    font-size: clamp(1.6rem, 6vw, 2rem);
+    line-height: 1.2;
+    text-align: center;
     margin-bottom: 20px;
+  }
+
+  .contact-section h2,
+  .contact-section .section-title {
+    font-size: clamp(1.6rem, 6vw, 2rem) !important;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .contact-section p {
+    font-size: 0.95rem !important;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  .contact-section .editorial-btn {
+    font-size: 0.8rem !important;
+    padding: 10px 14px;
+  }
+
+  p,
+  .hero-subtitle,
+  .about-prose p,
+  .skill-list li,
+  .cert-name,
+  .contact-section p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .skill-header h3,
+  .contact-section h3 {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  .contact-section small,
+  .contact-section span {
+    font-size: 0.85rem;
+  }
+
+  .editorial-btn {
+    font-size: 0.8rem;
+    padding: 10px 14px;
   }
 
   .section-subtitle {

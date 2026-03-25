@@ -52,15 +52,27 @@
 .status-dot {
   width: 8px;
   height: 8px;
-  background-color: #10B981; /* green success */
+  background-color: #10B981;
+  /* green success */
   border-radius: 50%;
   animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
 }
 
 .chat-header h3 {
@@ -80,7 +92,9 @@
   opacity: 0.6;
 }
 
-.close-btn:hover { opacity: 1; }
+.close-btn:hover {
+  opacity: 1;
+}
 
 .chat-body {
   flex: 1;
@@ -112,7 +126,7 @@
   background-color: white;
   color: var(--text-color);
   border-bottom-left-radius: 4px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
 }
 
 .user-bubble {
@@ -154,5 +168,11 @@
     width: 320px;
     right: 15px;
     bottom: 15px;
+  }
+}
+
+@media (max-width: 899px) {
+  .chatbot-wrapper {
+    display: none !important;
   }
 }

@@ -109,17 +109,21 @@
 }
 
 /* Mobile */
+
 @media (max-width: 899px) {
   .yoga-content {
     padding: 28px 22px;
   }
 
   .yoga-title {
-    font-size: 2.2rem;
+    font-size: clamp(1.6rem, 6vw, 2rem);
+    line-height: 1.2;
+    text-align: left;
   }
 
   .yoga-prose p {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 
   .yoga-image-container {

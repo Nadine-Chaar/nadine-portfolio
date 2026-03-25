@@ -91,11 +91,36 @@
 
 /* MOBILE */
 @media (max-width: 768px) {
+  .navbar {
+    padding: 14px 0;
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .nav-links {
-    gap: 16px;
+    display: flex;
+    width: auto;
+    gap: 0;
   }
 
   .nav-link {
     display: none;
+  }
+
+  .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  .logo {
+    font-size: 1.5rem;
   }
 }

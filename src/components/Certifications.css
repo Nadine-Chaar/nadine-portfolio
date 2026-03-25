@@ -40,3 +40,24 @@
   color: var(--text-color);
   line-height: 1.4;
 }
+
+@media (max-width: 900px) {
+  .cert-grid {
+    gap: 14px;
+  }
+
+  .cert-badge {
+    padding: 14px 14px;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .cert-icon {
+    font-size: 1rem;
+  }
+
+  .cert-name {
+    font-size: 0.9rem;
+    line-height: 1.35;
+  }
+}
