@@ -36,8 +36,7 @@ export default function Contact() {
 
           <div className="contact-meta">
             <div className="contact-location">
-              📍 Barcelona, Spain<br />
-              Beirut, Lebanon
+              📍 Beirut, Lebanon
             </div>
 
             <div className="contact-languages">

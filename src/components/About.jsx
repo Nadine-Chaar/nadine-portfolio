@@ -20,31 +20,28 @@ export default function About() {
             </h2>
 
             <div className="about-prose">
-              <p>I'm Nadine, a digital marketing strategist shaped by real-world impact.</p>
-
               <p>
-                I didn't start in a typical corporate environment. I started at the <strong>Children's Cancer Center of Lebanon (CCCL)</strong>, where marketing wasn't about selling products, but about telling stories that mattered — responsibly.
+                I'm Nadine, a digital marketing and communications professional with four years of experience building content, campaigns, and digital strategies that connect with people and drive measurable results.
               </p>
 
               <p>
-                Working on campaigns tied to real human lives forced me to think differently: not just what performs, but what <em>feels right</em>.
+                My career began at the <strong>Children's Cancer Center of Lebanon (CCCL)</strong>, where storytelling carried real responsibility. Working closely with patients, families, donors, and advocates taught me that effective marketing is not just about performance metrics — it's about creating meaningful connections.
               </p>
 
               <p>
-                For four years, I built and executed digital strategies across social media, websites, and campaigns — balancing emotional storytelling with data-driven decision-making. I've worked on everything from content production and UX improvements to SEO and performance tracking, always with one goal: create work that connects and converts without losing authenticity.
+                Throughout my time at CCCL, I led social media initiatives, content production, website projects, SEO improvements, campaign planning, and performance reporting, combining creative storytelling with data-driven decision-making.
               </p>
 
-              <p>That experience shaped how I approach marketing today:</p>
+              <p>
+                As I conclude my <strong>MSc in Digital Marketing & Analytics</strong> at TBS Education Barcelona, I continue to build on my foundation in analytics, strategy, and emerging AI-powered marketing tools, combining academic learning with hands-on industry experience.
+              </p>
 
               <ul className="about-list">
-                <li>Strategy first, not trends</li>
-                <li>Data as a guide, not a crutch</li>
-                <li>People at the center of every decision</li>
+                <li>Content Strategy & Storytelling</li>
+                <li>Social Media & Community Building</li>
+                <li>Analytics & Performance Marketing</li>
+                <li>Campaign Planning & Digital Strategy</li>
               </ul>
-
-              <p>
-                Now, as I complete my <strong>MSc in Digital Marketing & Analytics</strong> at TBS Education Barcelona, I'm expanding that foundation into performance marketing, analytics, and AI-driven workflows — building systems that make marketing smarter, not just louder.
-              </p>
             </div>
           </div>
 

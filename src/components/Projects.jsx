@@ -14,10 +14,10 @@ export default function Projects() {
         "Collaborated directly with affected families to ensure authentic storytelling",
         "Supported rapid-response campaign execution under crisis conditions"
       ],
-      impact: "The campaign drove strong engagement and contributed to increased donation efforts during a critical period, demonstrating how storytelling, when done responsibly, can mobilize real action."
+      impact: "The campaign helped amplify patient and family voices during a period of national crisis, supporting fundraising efforts and demonstrating the power of responsible storytelling in driving awareness and action."
     },
     {
-      title: "CCCL MARCOM Strategy & Share of Voice Growth (2025)",
+      title: "CCCL MARCOM Strategy & Share of Voice Analysis (2025)",
       tags: ["Analytics", "MARCOM", "Campaign Strategy"],
       link: null,
       context: "Led the analysis and tracking of a full-scale MARCOM strategy aimed at increasing public awareness and maintaining media dominance in Lebanon.",
@@ -34,7 +34,7 @@ export default function Projects() {
       title: "Bridge & Boost — Digital Strategy & UX",
       tags: ["UX", "Strategy", "Analytics"],
       link: "https://bridgeandboost.com/",
-      context: "Worked closely with my teammates to build a digital foundation for a student-led initiative from scratch.",
+      context: "Collaborated with a multidisciplinary team to develop the digital foundation of a student-led initiative, shaping its online presence, user experience, and growth strategy.",
       body: null,
       bullets: [
         "Website structure",
@@ -43,15 +43,15 @@ export default function Projects() {
         "Analytics tracking system"
       ],
       bulletsLabel: "Defined",
-      impact: "A clear, credible platform ready for growth."
+      impact: "Established the digital foundation for a student-led initiative, creating a structured online presence designed to support future growth and engagement."
     }
   ];
 
   return (
     <section id="projects" className="projects-section">
       <div className="container">
-        <h2 className="section-title">Selected Work & Experience</h2>
-        <p className="section-subtitle">Real campaigns, real organizations, real impact.</p>
+        <h2 className="section-title">Selected Projects</h2>
+        <p className="section-subtitle">Real campaigns, strategic work, and measurable impact.</p>
 
         <div className="projects-grid-presentation">
           {projects.map((proj, idx) => (

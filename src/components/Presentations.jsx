@@ -10,7 +10,7 @@ export default function Presentations() {
       role: "Presenter",
       videoLink: "https://www.youtube.com/watch?v=KOuO3vMGF4Y",
       thumbnail: cciThumb,
-      desc: "Presented at the CCI Asia Conference in Malaysia, showcasing the Children’s Cancer Center of Lebanon’s Gift for Life program. Highlighted how GFL supports children through the emotional journey of cancer, combining medical care, psychological support, and creative expression to help young patients build resilience, hope, and joy.",
+      desc: "Presented at the CCI Asia Conference in Malaysia, representing the Children’s Cancer Center of Lebanon and showcasing the Gift for Life program. The presentation highlighted how creative expression, emotional support, and patient-centered initiatives can help children navigate the cancer journey with resilience and hope.",
       tags: ["Speaking", "Advocacy", "Representation"]
     },
     {
@@ -18,7 +18,7 @@ export default function Presentations() {
       role: "Presenter",
       videoLink: "https://www.youtube.com/watch?v=BF6ekAsOXw8",
       thumbnail: stjudeThumb,
-      desc: "Invited to St. Jude Children’s Research Hospital in Memphis, TN, for a week-long NGO workshop on influencer strategies. Represented the Children’s Cancer Center of Lebanon (CCCL) and delivered a separate presentation highlighting CCCL’s partnerships, challenges, and solutions.",
+      desc: "Represented CCCL during a week-long NGO workshop at St. Jude Children’s Research Hospital focused on influencer strategies. Delivered a presentation on CCCL’s partnerships, challenges, and communication approaches within the nonprofit healthcare sector.",
       tags: ["Speaking", "Workshop", "Strategy"]
     }
   ];
@@ -28,7 +28,7 @@ export default function Presentations() {
       <div className="container">
         <h2 className="section-title">Speaking & Representation</h2>
         <p className="section-subtitle">
-          Featured presentations and global advocacy representing the Children&apos;s Cancer Center of Lebanon.
+          International presentations and advocacy work representing the Children&apos;s Cancer Center of Lebanon.
         </p>
 
         <div className="presentations-grid">

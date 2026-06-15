@@ -1,6 +1,6 @@
 import React from 'react';
 import './Hero.css';
-import heroPortrait from '../assets/images/nchero.jpg';
+import heroPortrait from '../assets/images/herojune.png';
 
 export default function Hero() {
   return (
@@ -9,7 +9,7 @@ export default function Hero() {
         <div className="hero-grid">
           <div className="hero-content">
             <div className="badge pink mb-4">
-              Digital Marketing · Strategy · Analytics · Social Media
+              Digital Marketing · Content Strategy · Analytics · Social Media
             </div>
 
             <h1 className="hero-title">
@@ -19,11 +19,13 @@ export default function Hero() {
             </h1>
 
             <p className="hero-subtitle">
-              Driven by a passion for communication and digital strategy, I turn stories into action, leading digital campaigns that bring together marketing, advocacy, and audience engagement.
+              Digital marketing professional with experience in content strategy,
+              social media, campaign planning, analytics, and audience engagement.
             </p>
 
             <p className="hero-subtitle hero-subtitle-spacing">
-              Whether building content strategies or analyzing performance, I focus on creating work that drives real, measurable impact.
+              From advocacy initiatives to brand campaigns, I create work that
+              combines creativity, data, and human insight to drive meaningful results.
             </p>
 
             <div className="hero-cta">

@@ -4,47 +4,47 @@ import './Skills.css';
 export default function Skills() {
   const skillCategories = [
     {
-      icon: '📈',
-      title: "Growth & Performance",
+      icon: '📱',
+      title: "Social Media & Content",
       skills: [
-        "CRO (Conversion Rate)",
-        "A/B Testing",
-        "Funnel Optimization",
-        "Audience Segmentation",
-        "Performance Tracking"
-      ]
-    },
-    {
-      icon: '📊',
-      title: "Analytics & Data",
-      skills: [
-        "GA4 & Tableau",
-        "RStudio",
-        "Custom Dashboards",
-        "Attribution Modeling",
-        "Automated Reporting"
+        "Social Media Management",
+        "Content Strategy",
+        "Community Engagement",
+        "Copywriting",
+        "Visual Content Planning"
       ]
     },
     {
       icon: '🎯',
-      title: "Campaigns & Content",
+      title: "Campaigns & Strategy",
       skills: [
-        "Campaign Strategy",
-        "Social Media Management",
-        "Lifecycle Campaigns",
+        "Campaign Planning",
+        "Digital Strategy",
+        "Audience Segmentation",
         "Impact Storytelling",
-        "SEO Fundamentals"
+        "Brand Positioning"
       ]
     },
     {
-      icon: '🤖',
-      title: "AI & Workflow Thinking",
+      icon: '📊',
+      title: "Analytics & Reporting",
       skills: [
-        "Workflow Automation",
-        "Structured Pipelines",
-        "AI-Assisted Execution",
-        "Prompt Engineering",
-        "Process Optimization"
+        "GA4",
+        "Tableau",
+        "Power BI",
+        "Performance Tracking",
+        "Campaign Reporting"
+      ]
+    },
+    {
+      icon: '🛠️',
+      title: "Tools & Workflows",
+      skills: [
+        "Meta Business Suite",
+        "Canva",
+        "CapCut",
+        "SEO Fundamentals",
+        "AI-Assisted Workflows"
       ]
     }
   ];
@@ -52,7 +52,7 @@ export default function Skills() {
   return (
     <section id="skills" className="skills-section">
       <div className="container">
-        <h2 className="section-title">Core Competencies</h2>
+        <h2 className="section-title">Skills</h2>
 
         <div className="skills-grid">
           {skillCategories.map((cat, idx) => (
